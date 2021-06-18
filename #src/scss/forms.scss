@@ -1,0 +1,89 @@
+//<FORM>====================================================================================================
+.form {
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+		margin: 0px 0px 15px 0px;
+		min-height: 51px;
+	}
+	&__btn {
+		padding: 14px 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+		width: 100%;
+		min-height: 51px;
+	}
+	&__error {
+	}
+	&__viewpass {
+
+		&._active {
+		}
+	}
+}
+//</FORM>====================================================================================================
+
+//<BUTTONS>====================================================================================================
+.btn {
+	display: inline-flex;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 125%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: #44C697;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	transition: color .3s, background .3s, border .3s;
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: #44C697;
+			background: #fff;
+			border-color: #44C697;
+		}
+	}
+}
+//</BUTTONS>====================================================================================================
+
+//<INPUT>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&:focus {
+		outline: none;
+	}
+}
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 15px;
+	border: 1px solid #1E2E36;
+	border-radius: 3px;
+	font-size: 18px;
+	line-height: 125%;
+	color: #1E2E36;
+
+	&._focus {
+	}
+	&._error {
+		border: 1px solid red;
+	}
+}
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+//</INPUT>====================================================================================================

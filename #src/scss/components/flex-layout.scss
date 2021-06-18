@@ -1,0 +1,38 @@
+.flex {
+
+	&__row {
+		display: flex;
+		flex-flow: column wrap;
+		align-content: space-between;
+		/*  Вашему контейнеру нужна фиксированная высота 
+		 *  и он должен быть выше, чем самая высокая колонка. */
+		height: 600px; 
+		margin: -15px;
+
+		&::after,
+		&::before {
+			content: "";
+			flex-basis: 100%;
+			width: 0;
+			order: 2;
+		}
+	}
+
+	&__column {
+		width: 32%;
+		padding: 15px;
+
+		&:nth-child(3n+1) { order: 1; }
+		&:nth-child(3n+2) { order: 2; }
+		&:nth-child(3n)   { order: 3; }
+
+		/* .item:nth-of-type(4n+1) { order: 1; }
+			.item:nth-of-type(4n+2) { order: 2; }
+			.item:nth-of-type(4n+3) { order: 3; }
+			.item:nth-of-type(4n)   { order: 4; } */
+	}
+
+	&__item {
+		background-color: #a1cbfa;
+	}
+}
